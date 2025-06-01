@@ -19,6 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Configure Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+ENABLE_VIRTUAL_AB := true
 
 # Configure SDCard replacement functionality
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -28,6 +29,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from holi device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
+$(call inherit-product, device/android/common/device.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
