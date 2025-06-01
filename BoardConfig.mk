@@ -19,6 +19,7 @@ AB_OTA_PARTITIONS += \
     system \
     product
 BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_STORE_RAMDISK_IN_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
